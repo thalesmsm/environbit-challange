@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Into The Wild",
+    "director": "Sean Penn",
+    "country": "Estados Unidos",
+    "release": "27 de Outubro de 2007",
+    "image": "https://upload.wikimedia.org/wikipedia/pt/thumb/8/8a/Into-the-wild.jpg/200px-Into-the-wild.jpg"
+  },
+  {
+    "name": "Fight Club",
+    "director": "David Fincher",
+    "country": "Estados Unidos",
+    "release": "29 de Outubro de 1999",
+    "image": "https://upload.wikimedia.org/wikipedia/pt/thumb/2/2b/FightClubPoster.jpg/230px-FightClubPoster.jpg"
+  },
+  {
+    "name": "Forrest Gump",
+    "director": "Robert Zemeckis",
+    "country": "Estados Unidos",
+    "release": "7 de Dezembro de 1994",
+    "image": "https://upload.wikimedia.org/wikipedia/pt/thumb/c/c0/ForrestGumpPoster.jpg/240px-ForrestGumpPoster.jpg"
+  },
+  {
+    "name": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "country": "Estados Unidos",
+    "release": "14 de Outubro de 1994",
+    "image": "https://upload.wikimedia.org/wikipedia/pt/thumb/8/82/Pulp_Fiction_cover.jpg/230px-Pulp_Fiction_cover.jpg"
+  },
+  {
+    "name": "The Book of Eli",
+    "director": "The Hughes Brothers",
+    "country": "Estados Unidos",
+    "release": "14 de Janeiro de 2010",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Book_of_eli_poster.jpg/220px-Book_of_eli_poster.jpg"
+  },
+  {
+    "name": "O Auto da Compadecida",
+    "director": "Guel Arraes",
+    "country": "Brasil",
+    "release": "15 de setembro de 2000",
+    "image": "https://upload.wikimedia.org/wikipedia/pt/thumb/b/bf/O_auto_da_compadecida.jpg/230px-O_auto_da_compadecida.jpg"
+  },
+  {
+    "name": "2 Coelhos",
+    "director": "Afonso Poyart",
+    "country": "Brasil",
+    "release": "20 de Janeiro de 2012",
+    "image": "https://upload.wikimedia.org/wikipedia/pt/thumb/0/02/P%C3%94STER_2_COELHOS.jpg/230px-P%C3%94STER_2_COELHOS.jpg"
+  },
+  {
+    "name": "The Truman Show",
+    "director": "Peter Weir",
+    "country": "Estados Unidos",
+    "release": "5 de junho de 1998",
+    "image": "https://upload.wikimedia.org/wikipedia/pt/thumb/8/85/TheTrumanShow.jpg/245px-TheTrumanShow.jpg"
+  }
+]

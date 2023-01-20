@@ -1,0 +1,4 @@
+.gitattributes
+src/index.js
+tailwind.config.js
+

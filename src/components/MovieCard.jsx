@@ -1,22 +1,32 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useContext, useEffect, useState } from 'react';
+import getMovies from '../fetchs/moviesFetch';
+import { Context } from '../context/Context';
 
-function MovieCard({ orderBySelected }) {
+function MovieCard() {
   const [movies, setMovies] = useState([]);
+  const {
+    orderBy, inpValue,
+  } = useContext(Context);
 
   useEffect(() => {
-    axios
-      .get('/db/movies.json')
-      .then((res) => setMovies(res.data));
+    getMovies().then((res) => setMovies(res));
   }, []);
+
+  useEffect(() => {
+    if (inpValue) {
+      setMovies((m) => m
+        .filter((movie) => movie.title.toLowerCase().includes(inpValue)));
+    } else {
+      getMovies().then((res) => setMovies(res));
+    }
+  }, [inpValue]);
 
   return (
     <div className="flex flex-wrap justify-center p-4">
       { movies
         .sort((a, b) => (
-          a[orderBySelected] < b[orderBySelected] ? -1
-            : a[orderBySelected] > b[orderBySelected] ? 1 : 0
+          a[orderBy] < b[orderBy] ? -1
+            : a[orderBy] > b[orderBy] ? 1 : 0
         ))
         .map((movie) => (
           <div
@@ -37,9 +47,5 @@ function MovieCard({ orderBySelected }) {
     </div>
   );
 }
-
-MovieCard.propTypes = {
-  orderBySelected: PropTypes.string.isRequired,
-};
 
 export default MovieCard;

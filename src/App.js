@@ -1,12 +1,22 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import './styles/main.css';
 
 function App() {
   return (
-    <div>
-      <h1 className="text-5xl">EnvironBIT Films</h1>
-      <HomePage />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          component={ HomePage }
+        />
+        {/* <Route
+          path="/favorites"
+          component={ Favorites }
+        /> */}
+      </Switch>
+    </BrowserRouter>
   );
 }
 

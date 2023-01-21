@@ -16,9 +16,15 @@ function NavBar() {
 
   return (
     <nav>
+      <button
+        type="button"
+      >
+        Favoritos
+      </button>
       <label htmlFor="findByName">
         <input
           type="text"
+          placeholder="Pesquisar por filme"
           onChange={ handleChangeInput }
         />
       </label>

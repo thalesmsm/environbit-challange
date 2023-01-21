@@ -8,7 +8,8 @@ function MovieCard() {
     new Array(8).fill(false),
   );
   const {
-    orderBy, inpValue,
+    orderBy, inpValue, favoriteMovies,
+    setFavoriteMovies,
   } = useContext(Context);
 
   useEffect(() => {
@@ -40,6 +41,10 @@ function MovieCard() {
     );
     setIsFavorite(updatedIsFavoriteState);
     localStorage.setItem('favorites', JSON.stringify(updatedIsFavoriteState));
+
+    favoriteMovies.push(movies.find((mov) => mov.id === movieId));
+    const items = [...favoriteMovies];
+    setFavoriteMovies(items);
   };
 
   return (

@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Context } from '../context/Context';
 
@@ -21,17 +20,19 @@ function NavBar() {
     <nav className="flex flex-col items-center md:justify-between bg-[#F25E21] p-4">
       <a
         href="https://environbit.com.br/"
-        className="text-3xl h-12"
+        target="_blank"
+        className="text-3xl h-12 font-bold"
+        rel="noreferrer"
       >
-        EnvironBIT Movies
+        EnvironBIT Movies &#x1F3AC;
       </a>
       <div
         className="
-        flex flex-col items-center md:flex-row md:justify-around md:w-full"
+        flex flex-col items-center md:flex-row md:justify-between md:px-4 md:w-full"
       >
         <label
           htmlFor="filter"
-          className="block text-gray-700 text-sm font-bold mb-2"
+          className="block text-gray-800 text-sm font-bold mb-2"
         >
           Ordenar por:
           <select

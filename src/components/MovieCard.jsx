@@ -66,7 +66,7 @@ function MovieCard() {
             <button
               type="button"
               onClick={ () => setFavorite(movie.id) }
-              className="text-2xl text-start w-full"
+              className="text-2xl text-start ml-[-220px]"
             >
 
               { isFavorite[movie.id - 1]

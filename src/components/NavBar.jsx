@@ -1,4 +1,7 @@
 import { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Context } from '../context/Context';
 
 function NavBar() {
@@ -15,32 +18,53 @@ function NavBar() {
   };
 
   return (
-    <nav>
-      <button
-        type="button"
+    <nav className="flex flex-col items-center md:justify-between bg-[#F25E21] p-4">
+      <a
+        href="https://environbit.com.br/"
+        className="text-3xl h-12"
       >
-        Favoritos
-      </button>
-      <label htmlFor="findByName">
-        <input
-          type="text"
-          placeholder="Pesquisar por filme"
-          onChange={ handleChangeInput }
-        />
-      </label>
-      <label htmlFor="filter">
-        Ordenar por:
-        <select
-          name="filter"
-          id="filter"
-          onChange={ handleChangeSelect }
-          className="ml-2"
+        EnvironBIT Movies
+      </a>
+      <div
+        className="
+        flex flex-col items-center md:flex-row md:justify-around md:w-full"
+      >
+        <label
+          htmlFor="filter"
+          className="block text-gray-700 text-sm font-bold mb-2"
         >
-          <option value="release">Lançamento</option>
-          <option value="title">Nome</option>
-          <option value="country">País</option>
-        </select>
-      </label>
+          Ordenar por:
+          <select
+            name="filter"
+            id="filter"
+            onChange={ handleChangeSelect }
+            className="shadow rounded bg-slate-100
+            border py-2 text-gray-700 leading-tight
+            focus:outline-none focus:shadow-outline ml-2"
+          >
+            <option value="release">Lançamento</option>
+            <option value="title">Nome</option>
+            <option value="country">País</option>
+          </select>
+        </label>
+        <div className="flex justify-center">
+          <label htmlFor="findByName">
+            <input
+              type="text"
+              placeholder="Pesquisar por filme"
+              onChange={ handleChangeInput }
+              className="shadow appearance-none border border-r-0 rounded-l
+              py-2 px-3 text-gray-700 leading-tight bg-slate-100
+              focus:outline-none focus:shadow-outline"
+            />
+          </label>
+          <FontAwesomeIcon
+            icon={ faMagnifyingGlass }
+            className="shadow appearance-none border border-l-0 rounded-r
+            py-2 px-3 h-5 bg-slate-100"
+          />
+        </div>
+      </div>
     </nav>
   );
 }

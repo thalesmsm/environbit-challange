@@ -21,7 +21,7 @@ function NavBar() {
       <a
         href="https://environbit.com.br/"
         target="_blank"
-        className="text-3xl h-12 font-bold"
+        className="text-3xl h-12 font-bold text-white"
         rel="noreferrer"
       >
         EnvironBIT Movies &#x1F3AC;
@@ -32,7 +32,7 @@ function NavBar() {
       >
         <label
           htmlFor="filter"
-          className="block text-gray-800 text-sm font-bold mb-2"
+          className="block text-white text-sm font-bold mb-2"
         >
           Ordenar por:
           <select

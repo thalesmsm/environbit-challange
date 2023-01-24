@@ -51,8 +51,8 @@ function MovieCard() {
   };
 
   return (
-    <div className="flex flex-wrap justify-center p-4 bg-[#39268B]">
-      { movies
+    <div className="flex flex-wrap justify-center p-4">
+      { movies.length > 0 ? movies
         .sort((a, b) => (
           a[orderBy] < b[orderBy] ? -1
             : a[orderBy] > b[orderBy] ? 1 : 0
@@ -82,11 +82,21 @@ function MovieCard() {
             />
             <div className="flex flex-col">
               <div>
-                <span className="text-md text-gray-500 font-bold">Diretor: </span>
+                <span
+                  className="text-md text-gray-500 font-bold"
+                >
+                  Diretor:
+                  {' '}
+                </span>
                 <span className="text-sm">{movie.director}</span>
               </div>
               <div>
-                <span className="text-md text-gray-500 font-bold">País: </span>
+                <span
+                  className="text-md text-gray-500 font-bold"
+                >
+                  País:
+                  {' '}
+                </span>
                 <span className="text-sm">{movie.country}</span>
               </div>
               <div>
@@ -95,13 +105,20 @@ function MovieCard() {
                 >
                   Ano de lançamento:
                   {' '}
-
                 </span>
                 <span className="text-sm">{movie.release}</span>
               </div>
             </div>
           </div>
-        ))}
+        ))
+        : (
+          <div className=" flex justify-center mt-24">
+            <h1
+              className="text-white font-semibold"
+            >
+              Desculpe, não foi possível encontrar o filme que procura!
+            </h1>
+          </div>)}
     </div>
   );
 }
